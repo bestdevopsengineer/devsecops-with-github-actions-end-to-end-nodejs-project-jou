@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@master
       - name: RunSnyk to check for vulnerabilities
         uses: snyk/actions/node@master
-        continue-on-error: true
+        continue-on-error: false
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   zap_scan:
