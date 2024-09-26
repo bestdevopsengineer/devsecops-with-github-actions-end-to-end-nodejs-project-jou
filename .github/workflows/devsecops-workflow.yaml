@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Run unit tests and SAST scan on the source code 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: 16
         cache: npm
@@ -19,8 +19,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=devsecopsgithubactionsnodejsproject
-          -Dsonar.projectKey=devsecopsganodejsprojectkey
+          -Dsonar.organization=devsecopsgithubactionsnodejsprojectjou
+          -Dsonar.projectKey=devsecopsgithubactionsnodejsprojectjou
   security:
     runs-on: ubuntu-latest
     needs: build
